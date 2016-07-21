@@ -1,0 +1,18 @@
+<div class="navbg"></div>
+
+<div class="container">
+<%= form_for @vacature do |v| %>
+
+<div class="form-group">
+  <%= v.label :title %><br />
+  <%= v.text_field :title %>
+</div>
+
+<div class="form-group">
+  <%= v.label :category %><br />
+  <%= v.text_field :category %>
+</div>
+
+<%= v.submit "Doe maar!", class: "btn btn-primary" %>
+<% end %>
+</div>

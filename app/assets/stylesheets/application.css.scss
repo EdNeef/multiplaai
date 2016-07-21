@@ -458,4 +458,136 @@ p {
 
 }
 
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Arvo:400,700,700italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
 
+// colors
+$primary-color: #3781fd;
+$secondary-color: #f9593a;
+$primary-light: #ecf0fb;
+$white: #ffffff;
+$lightgrey: #f8f8f8;
+$grey: #999999;
+$darkgrey: #343434;
+$black: #292929;
+$alt-bg: #f8f8f8;
+$headerbg: #0f1828;
+$footerbg: #222935;
+
+// Fonts
+$open: 'Open Sans', sans-serif;
+$arvo: 'Arvo', serif;
+$mont: 'Montserrat', sans-serif;
+
+
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Arvo:400,700,700italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
+
+// misc
+$radius: 5px;
+
+// Media queries
+$tablet: 768px;
+
+h2 {
+	font-size: 200%;
+	color: $darkgrey;
+	font-family: $arvo;
+	font-weight: 700;
+	text-align: center;
+	text-transform: none;
+	&.left {
+		text-align: left;
+	}
+}
+
+h3 {
+	font-family: $arvo;
+	font-size: 150%;
+	color: $darkgrey;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+ul {
+	&.pagination {
+		font-weight: 700;
+		font-size: 87.5%;
+		a {
+			color: $primary-color;
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+	}
+}
+
+span {
+	&.vacaform {
+		color: $darkgrey;
+		text-transform: uppercase;
+		font-size: 87.5%;
+		font-weight: 700;
+		font-family: $mont;
+	}
+}
+
+.btn {
+	transition: all .3s ease-in-out;
+	padding: 15px 30px;
+	font-size: 87.5%;
+	font-weight: 700;
+	font-family: $mont;
+	color: $white;
+	text-transform: uppercase;
+}
+
+
+.btn-primary {
+	background: $primary-color;
+	border: 0;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+	transition: all .2s ease-in-out;
+	&:hover {
+		background: $secondary-color;
+	}
+}
+
+.btn-secondary {
+	transition: all .2s ease-in-out;
+	background: $white;
+	color: $grey;
+	border: 2px solid #ecf0fb;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+.customhr {
+	margin: 30px auto;
+}
+
+.customhrleft {
+	margin: 30px 0;
+}
+
+.customhrright {
+	margin: 30px 0;
+	float: right;
+}
+
+.marginrow {
+	margin-top: 100px;
+}
+
+.customhr, .customhrleft, .customhrright {
+	width: 50px;
+	height: 2px;
+	background: $primary-color;
+}

@@ -1,7 +1,23 @@
-<% @vacatures.each do |vacature| %>
-<div class="navbg"></div>
+<div class="container">
+  <div id="laatste-vacatures">
+    <h2>Alle vacatures</h2>
+    <div class="customhr left"></div>
+      <div class="vacatures">
+        <% @vacatures.each do |vacature| %>
+        <div class="vacature">
+          <div class="icon">
+            <i class="glyphicon devicon-<%= vacature.category %>-plain"></i>
+          </div>
+          <div class="tekst">
+          <h3><%= vacature.title %></h3>
+          <p>Google / <%= vacature.location %> / <%= vacature.created_at.strftime("%d %B %Y") %></p>
+        </div>
+      <div class="buttonz">
+        
+      <button type="button" class="btn btn-primary">Bekijk vacature</button>
+    </div>
 
-Hier komen de vacatures:
-<p><%= vacature.title %></p>
-
-<% end %>
+    <div class="clearfix"></div>
+  </div>
+  <% end %>
+</div>
