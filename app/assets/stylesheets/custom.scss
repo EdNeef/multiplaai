@@ -1,0 +1,409 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "modules";
+@import "partials";
+
+body {
+	background: $white;
+	font-size: 100%;
+	font-family: $open;
+	line-height: 175%;
+}
+
+
+#laatste-vacatures {
+	padding: 100px 0;
+	color: $grey;
+	font-size: 87.5%;
+
+	h3 {
+		padding: 0;
+		margin: 3px 0 20px 0;
+	}
+
+	.vacatures {
+		padding-bottom: 50px;
+		border-top: 1px solid #e3e3e3;
+	}
+}
+
+.vacature {
+	line-height: 100%;
+	border-bottom: 1px solid #e3e3e3;
+	padding: 30px 20px;
+	transition: all .3s ease-in-out;
+	.icon {
+		display: none;
+	}
+
+	.glyphicon {
+		background: $primary-color;
+		color: $white;
+		padding: 20px;
+		font-size: 200%;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		margin-bottom: 20px;
+	}
+
+	.btn {
+		width: 100%;
+		margin-top: 30px;
+	}
+
+	&:hover {
+		transform: scale(1.05);
+		background: $primary-light;
+		color: $black;
+		.glyphicon {
+			background: $secondary-color;
+		}
+		.btn-primary {
+			background: $secondary-color;
+		}
+	}
+} 
+
+#mainheader {
+	padding: 180px 0 100px;
+	background-image: url('../img/header.png');
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-color: $headerbg;
+	color: $white;
+	text-align: center;
+
+	.smallslogan {
+		display: block;
+		padding-bottom: 40px;
+		font-size: 70%;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: $mont;
+		letter-spacing: 2px;
+	}
+
+	input {
+		padding: 0;
+		margin: 0;
+		font-family: $open;
+		color: $black;
+		font-size: 80%;
+		padding: 21px 0 20px 70px;
+		border: 0;
+		-webkit-border-radius: $radius;
+		-moz-border-radius: $radius;
+		border-radius: $radius; 
+	}
+
+	.icon-addon {
+		position: relative;
+	}
+
+	.submit {
+		display: inline-block;
+	}
+
+	.glyphicon {
+		position: absolute;
+		z-index: 2;
+		color: $white;
+		font-size: 100%;
+		padding: 9px 20px 10px 20px;
+		background: $secondary-color;
+		left: 3px;
+		top: 3px;
+		-webkit-border-radius: 5px 0px 0px 5px;
+		-moz-border-radius: 5px 0px 0px 5px;
+		border-radius: 5px 0px 0px 5px; 
+	}
+
+	input[type=submit] {
+		background: $secondary-color;
+		color: $white;
+		font-family: $mont;
+		font-weight: 700;
+		font-size: 75%;
+		text-transform: uppercase;
+		padding: 7px 23px 6px 23px;
+		width: 100%;
+		transition: all .2s ease-in-out;
+		&:hover {
+			background: $primary-color;
+		}
+	}
+
+	#zoeken {
+		text-align: center;
+	}
+}
+
+.bigslogan {
+	font-size: 250%;
+	display: block;
+	padding-bottom: 70px;
+	font-weight: 700;
+	font-family: $arvo;
+	line-height: 120%;
+}
+
+#cats {
+	padding: 100px 0 70px;
+	background: $lightgrey;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+}
+
+
+.cat {
+	padding: 30px;
+	background: $white;
+	border: 1px solid #ebebeb;
+	margin-bottom: 30px;
+	text-align: center;
+	color: $grey;
+	transition: all .3s ease-in-out;
+	.glyphicon {
+		font-size: 400%;
+		margin-bottom: 30px;
+		color: $primary-color;
+	}
+	h3 {
+		text-transform: uppercase;
+		font-size: 87.5%;
+		font-weight: 700;
+		font-family: $mont;
+		margin-bottom: 30px;
+	}
+	&:hover {
+		transform: scale(1.13);
+		background: $primary-color;
+		color: $white;
+		-webkit-box-shadow: 0 8px 6px -6px #8390a6;
+		-moz-box-shadow: 0 8px 6px -6px #8390a6;
+		box-shadow: 0 8px 6px -6px #8390a6;
+		border: 0;
+	}
+	&:hover .glyphicon {
+		color: $white;
+	}
+	&:hover h3 {
+		color: $white;
+	}
+}
+
+#zomaar {
+	padding: 100px 0;
+}
+
+.tekstblok {
+	color: #486493;
+	h3 {
+		text-transform: uppercase;
+		font-size: 87.5%;
+		font-weight: 700;
+		font-family: $mont;
+		margin: 20px 0;
+	}
+}
+
+p {
+	&.inleiding {
+		font-weight: 700;
+	}
+}
+
+#footer {
+	background: $footerbg;
+	padding: 70px 0;
+	color: $white;
+	text-align: center;
+	border-bottom: 50px solid #12171e;
+	.social {
+		padding-top: 50px;
+		ul li {
+			display: inline-block;
+			padding: 20px;
+		}
+	}
+	.glyphicon {
+		font-size: 150%;
+	}
+}
+
+.logo {
+	font-family: $mont;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 175%;
+	span {
+		color: $secondary-color;
+	}
+}
+
+.navbar {
+	font-size: 75%;
+	font-family: $mont;
+	text-transform: uppercase;
+	a {
+		color: $white;
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+	.glyphicon {
+		color: $white;
+		font-size: 150%;
+		margin-top: 2px;
+	}
+}
+
+.navbar-brand {
+    font-size: 24px;
+    margin: 7px 0 0 20px;
+}
+
+.navbar-container {
+    padding: 20px 0 20px 0;
+}
+
+.navbar.navbar-fixed-top.fixed-theme {
+    background-color: $footerbg;
+    border-color: #080808;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+
+.navbar {
+	background: $footerbg;
+}
+
+
+
+.navbar-brand.fixed-theme {
+    font-size: 18px;
+}
+
+.navbar-container.fixed-theme {
+    padding: 0;
+}
+
+.navbar-brand.fixed-theme,
+.navbar-container.fixed-theme,
+.navbar.navbar-fixed-top.fixed-theme,
+.navbar-brand,
+.navbar-container{
+    transition: 0.8s;
+    -webkit-transition:  0.8s;
+}
+
+.navbg {
+	background: $headerbg;
+	height: 90px;
+	width: 100%;
+}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+	margin-left: 0;
+}
+
+.onzevac {
+	form {
+		background: #f8f8f8;
+		border: 1px solid #e3e3e3;
+		padding: 20px;
+		margin-bottom: 30px;
+	}
+	.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+		margin-left: 0;
+		top: 4px;
+	}
+	fieldset {
+		margin: 20px 0;
+	}
+}
+
+.zoekveld {
+	color: $grey;
+	font-family: $mont;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 87.5%;
+}
+
+@media (min-width: $tablet) {
+
+	.vacature {
+
+		.icon {
+			float: left;
+			display: block;
+		}
+
+		.tekst {
+			float: left;
+			margin-top: 4px;
+		}
+
+		.buttonz {
+			float: right;
+		}
+
+		.btn {
+			margin: 15px 0 0 0;
+			width: auto;
+		}
+
+		.glyphicon {
+			font-size: 250%;
+			margin: 0 30px 0 0;
+		}
+
+		p {
+			margin-top: -7px;
+		}
+
+	}
+
+	.bigslogan {
+		font-size: 400%;
+	}
+
+	.icon-addon {
+		margin-right: 15px;
+	}
+
+	#mainheader {
+		padding: 200px 0;
+	}
+
+	#footer {
+		.social {
+			padding: 0;
+			text-align: right;
+		}
+		.logo {
+			text-align: left;
+		}
+		.social ul li {
+			padding: 0 0 0 70px;
+		}
+	}
+
+	.navbar-nav {
+		float: right;
+	}
+	.navbar-brand {
+    	margin: 0;
+	}
+	.navbar {
+		background: none;
+	}
+
+}
+
+
