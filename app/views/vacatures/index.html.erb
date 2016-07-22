@@ -1,23 +1,315 @@
-<div class="container">
-  <div id="laatste-vacatures">
-    <h2>Alle vacatures</h2>
-    <div class="customhr left"></div>
-      <div class="vacatures">
-        <% @vacatures.each do |vacature| %>
-        <div class="vacature">
-          <div class="icon">
-            <i class="glyphicon devicon-<%= vacature.category %>-plain"></i>
-          </div>
-          <div class="tekst">
-          <h3><%= vacature.title %></h3>
-          <p>Google / <%= vacature.location %> / <%= vacature.created_at.strftime("%d %B %Y") %></p>
-        </div>
-      <div class="buttonz">
-        
-      <button type="button" class="btn btn-primary">Bekijk vacature</button>
-    </div>
+<%= render 'layouts/navigation' %>
 
-    <div class="clearfix"></div>
-  </div>
-  <% end %>
-</div>
+<div class="container">
+        <div id="laatste-vacatures">
+            <div class="row onzevac">
+
+                <div class="col-lg-4 zoekveld">
+
+                    <h2 class="left">Onze vacatures</h2>
+                    <div class="customhrleft"></div>
+
+                    <form role="form">
+
+                        <span class="vacaform">Niveau</span>
+
+                        <fieldset>
+                        <div class="radio">
+                            <input type="radio" name="niveau" id="niv1" value="option1">
+                            <label for="niv1">
+                                Junior
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" name="niveau" id="niv2" value="option1">
+                            <label for="niv2">
+                                Medior
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" name="niveau" id="niv3" value="option1">
+                            <label for="niv3">
+                                Senior
+                            </label>
+                        </div>
+                        </fieldset>
+
+                        <span class="vacaform">Provincie</span>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <fieldset>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio1">
+                                    <label for="radio1">
+                                        Drenthe
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio2">
+                                    <label for="radio2">
+                                        Groningen
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio3">
+                                    <label for="radio3">
+                                        Friesland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio4">
+                                    <label for="radio4">
+                                        Flevoland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio5">
+                                    <label for="radio5">
+                                        Overijssel
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio6">
+                                    <label for="radio6">
+                                        Noord-Holland
+                                    </label>
+                                </div>
+                            </fieldset>
+                            </div>
+                            <div class="col-sm-6">
+                              <fieldset>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio7">
+                                    <label for="radio7">
+                                        Zuid-Holland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio8">
+                                    <label for="radio8">
+                                        Utrecht
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio9">
+                                    <label for="radio9">
+                                        Zeeland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio10">
+                                    <label for="radio10">
+                                        Noord-Brabant
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio11">
+                                    <label for="radio11">
+                                        Limburg
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio12">
+                                    <label for="radio12">
+                                        Gelderland
+                                    </label>
+                                </div>
+                              </fieldset>
+                            </div>
+                        </div>
+
+                        <span class="vacaform">Iets anders dan weer</span>
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <fieldset>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio1">
+                                    <label for="radio1">
+                                        Drenthe
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio2">
+                                    <label for="radio2">
+                                        Groningen
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio3">
+                                    <label for="radio3">
+                                        Friesland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio4">
+                                    <label for="radio4">
+                                        Flevoland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio5">
+                                    <label for="radio5">
+                                        Overijssel
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio6">
+                                    <label for="radio6">
+                                        Noord-Holland
+                                    </label>
+                                </div>
+                            </fieldset>
+                            </div>
+                            <div class="col-sm-6">
+                              <fieldset>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio7">
+                                    <label for="radio7">
+                                        Zuid-Holland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio8">
+                                    <label for="radio8">
+                                        Utrecht
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio9">
+                                    <label for="radio9">
+                                        Zeeland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio10">
+                                    <label for="radio10">
+                                        Noord-Brabant
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio11">
+                                    <label for="radio11">
+                                        Limburg
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio12">
+                                    <label for="radio12">
+                                        Gelderland
+                                    </label>
+                                </div>
+                              </fieldset>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+                <div class="col-lg-8">
+
+                    <h2 class="left">Dit kwam er uit</h2>
+                    <div class="customhrleft"></div>
+
+                    <div class="vacatures">
+                        <div class="vacature">
+                            <div class="icon">
+                                <i class="glyphicon devicon-git-plain"></i>
+                            </div>
+
+                            <div class="tekst">
+                                <h3>Senior front-end developer</h3>
+                                <p>Google / Rotterdam / 4 juli 2016</p>
+                            </div>
+
+                            <div class="buttonz">
+                                <button type="button" class="btn btn-primary">Bekijk vacature</button>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="vacature">
+                            <div class="icon">
+                                <i class="glyphicon devicon-git-plain"></i>
+                            </div>
+
+                            <div class="tekst">
+                                <h3>Senior front-end developer</h3>
+                                <p>Google / Rotterdam / 4 juli 2016</p>
+                            </div>
+
+                            <div class="buttonz">
+                                <button type="button" class="btn btn-primary">Bekijk vacature</button>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="vacature">
+                            <div class="icon">
+                                <i class="glyphicon devicon-git-plain"></i>
+                            </div>
+
+                            <div class="tekst">
+                                <h3>Senior front-end developer</h3>
+                                <p>Google / Rotterdam / 4 juli 2016</p>
+                            </div>
+
+                            <div class="buttonz">
+                                <button type="button" class="btn btn-primary">Bekijk vacature</button>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="vacature">
+                            <div class="icon">
+                                <i class="glyphicon devicon-git-plain"></i>
+                            </div>
+
+                            <div class="tekst">
+                                <h3>Senior front-end developer</h3>
+                                <p>Google / Rotterdam / 4 juli 2016</p>
+                            </div>
+
+                            <div class="buttonz">
+                                <button type="button" class="btn btn-primary">Bekijk vacature</button>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="vacature">
+                            <div class="icon">
+                                <i class="glyphicon devicon-git-plain"></i>
+                            </div>
+
+                            <div class="tekst">
+                                <h3>Senior front-end developer</h3>
+                                <p>Google / Rotterdam / 4 juli 2016</p>
+                            </div>
+
+                            <div class="buttonz">
+                                <button type="button" class="btn btn-primary">Bekijk vacature</button>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <ul class="pagination">
+                      <li><a href="#">&laquo;</a></li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

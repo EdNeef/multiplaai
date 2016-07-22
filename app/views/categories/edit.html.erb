@@ -1,9 +1,11 @@
+
 <%= render 'layouts/admin_navigation' %>
 <div class="container">
 <%= flash_messages %>
-</div>
+
 <% if logged_in? %>
 <%= render 'form' %>
 <% else %>
-<%= render 'layouts/denied' %>
+<%= render 'denied' %>
 <% end %>
+  </div>

@@ -3,11 +3,7 @@
 <div class="container">
 <%= flash_messages %>
 </div>
-<h2>Welkom, Edmin!</h2>
+<%= render 'categories/all' %>
 <% else %>
-
-<div class="container">
-<%= flash_messages %>
-</div>
-  <%= render 'layouts/denied' %>
+<%= render 'layouts/denied' %>
 <% end %>

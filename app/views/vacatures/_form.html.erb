@@ -1,22 +1,27 @@
 <div class="container">
-<%= simple_form_for @vacature do |v| %>
+  <%= simple_form_for @vacature do |v| %>
 
-<div class="form-group">
-  <%= v.input :title %>
-</div>
+  <div class="form-group">
+    <%= v.input :title, label: "Titel vacature" %>
+  </div>
 
-<div class="form-group">
-  <%= v.input :category, collection: [:angular, :css3, :drupal, :git, :html5, :linux, :photoshop, :php, :ruby, :wordpress], selected: :angular %>
-</div>
-  
-<div class="form-group">
-  <%= v.input :location %>
-</div>  
+  <div class="form-group">
+     <%=v.input :category_id, collection: @category, label: "Selecteer categorie" %>
+  </div>
 
-<div class="form-group">
-  <%= v.input :description %>
-</div>  
-  
-<%= v.submit "Doe maar!", class: "btn btn-primary" %>
-<% end %>
+  <div class="form-group">
+    <%= v.input :function, label: "Om welke functie gaat het?" %>
+  </div>
+
+  <div class="form-group">
+    <%= v.input :location, label: "Locatie (stad)" %>
+  </div>
+
+  <div class="form-group">
+    <%= v.input :description, label: "Beschrijving" %>
+  </div>
+
+  <%= v.submit(@vacature.new_record? ? "Voeg vacature toe!" : "Update vacature", class: "btn btn-success") %>
+  <%= link_to "Terug naar overzicht", admin_vacatures_path, class: "btn btn-info" %>
+  <% end %>
 </div>

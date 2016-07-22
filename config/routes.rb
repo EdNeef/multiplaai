@@ -1,11 +1,22 @@
 Rails.application.routes.draw do
-  get 'admin/index'
-  get 'admin/new'
 
-  get 'home/index'
+  get 'admin', to: 'admin#index'
+
+  get 'admin/login', to: 'sessions#new'
+  post 'admin/login', to: 'sessions#create'
+  get 'admin/logout', to: 'sessions#destroy'
+  get 'admin/signup', to: 'users#new'
+
+  get 'admin/vacatures'
+  get 'admin/categories'
+  
+
   root 'home#index'
 
   resources :vacatures
+  resources :categories
+
+  resources :users, except: [:new]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

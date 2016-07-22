@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'acts-as-taggable-on', '~> 3.4'
+gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -47,4 +49,5 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
 

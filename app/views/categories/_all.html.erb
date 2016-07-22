@@ -1,0 +1,27 @@
+<div class="container">
+  <div id="laatste-vacatures">
+    <h2>Alle categorieen</h2>
+    <div class="customhr left"></div>
+      <div class="vacatures">
+        <% @categories.each do |cat| %>
+        <div class="vacature">
+          <div class="icon">
+            <i class="glyphicon devicon-<%= cat.logo %>-plain"></i>
+          </div>
+          <div class="tekst">
+          <h3><%= cat.title %></h3>
+          <p><%= cat.logo %></p>
+        </div>
+      <div class="buttonz">
+
+      <%= link_to "Bewerk", edit_category_path(cat), class: "btn btn-info" %>
+      <%= link_to "X", category_path(cat), class: "btn btn-danger", method: :delete, data: {confirm: "Weet je zeker dat je deze categorie wilt verwijderen?"} %>
+
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+  <% end %>
+</div>
+  </div>
+  </div>

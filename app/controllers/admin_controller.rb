@@ -1,27 +1,16 @@
 class AdminController < ApplicationController
+
   def index
-    @vacatures = Vacature.new
+    @vacatures = Vacature.all
   end
 
-  def new
-    @vacature = Vacature.new
+  def vacatures
+    @vacatures = Vacature.all
   end
 
-  def create
-    @vacature = Vacature.new(vacature_params)
-    if @vacature.save
-      flash[:success] = "vacature toegevoegd"
-      redirect_to root_url
-    else
-      flash[:error] = "niet gelukt"
-      redirect_to root_url
-    end
+  def categories
+    @categories = Category.all
   end
 
-
-
-  def vacature_params
-    params.require(:vacature).permit(:title, :category)
-  end
 
 end

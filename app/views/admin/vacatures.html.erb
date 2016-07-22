@@ -2,8 +2,4 @@
 <div class="container">
 <%= flash_messages %>
 </div>
-<% if logged_in? %>
-<%= render 'form' %>
-<% else %>
-<%= render 'layouts/denied' %>
-<% end %>
+<%= render 'vacatures/all' %>
