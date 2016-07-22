@@ -1,7 +1,8 @@
 class VacaturesController < ApplicationController
 
   def index
-
+    @categories = Category.all
+    @vacatures = Vacature.by_category_id_and_location(params[:category_id], params[:location])
   end
 
   def new

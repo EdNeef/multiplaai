@@ -1,0 +1,245 @@
+        <div id="laatste-vacatures">
+            <div class="row onzevac">
+
+                <div class="col-lg-4 zoekveld">
+
+                    <h2 class="left">Onze vacatures</h2>
+                    <div class="customhrleft"></div>
+
+                  <%= form_tag '', :method => :get do %>
+
+                  <span class="vacaform">Niveau</span>
+
+                  <fieldset>
+                    <% @categories.each do |cat| %>
+                    <div class="radio">
+                      <%= radio_button_tag 'category_id', cat.id %>
+                      <label><%= cat.title %></label>
+                    </div>
+                    <% end %>
+                  </fieldset>
+
+                   <span class="vacaform">Provincie</span>
+
+                  <fieldset>
+                    <% @categories.each do |cat| %>
+                    <div class="radio">
+                      <%= radio_button_tag 'category_id', cat.id %>
+                      <label><%= cat.title %></label>
+                    </div>
+                    <% end %>
+                  </fieldset>
+
+                  <span class="vacaform">Categorie</span>
+
+                  <fieldset>
+                    <% @categories.each do |cat| %>
+                    <div class="radio">
+                      <%= radio_button_tag 'category_id', cat.id %>
+                      <label><%= cat.title %></label>
+                    </div>
+                    <% end %>
+                  </fieldset>
+
+
+  <%= submit_tag 'FilterRRRRRRRRRRR' %>
+<% end %>
+
+                    <form role="form">
+
+                        <span class="vacaform">Niveau</span>
+
+                        <fieldset>
+                        <div class="radio">
+                            <input type="radio" name="niveau" id="niv1" value="option1">
+                            <label for="niv1">
+                                Junior
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" name="niveau" id="niv2" value="option1">
+                            <label for="niv2">
+                                Medior
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" name="niveau" id="niv3" value="option1">
+                            <label for="niv3">
+                                Senior
+                            </label>
+                        </div>
+                        </fieldset>
+
+                        <span class="vacaform">Provincie</span>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <fieldset>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio1">
+                                    <label for="radio1">
+                                        Drenthe
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio2">
+                                    <label for="radio2">
+                                        Groningen
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio3">
+                                    <label for="radio3">
+                                        Friesland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio4">
+                                    <label for="radio4">
+                                        Flevoland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio5">
+                                    <label for="radio5">
+                                        Overijssel
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio6">
+                                    <label for="radio6">
+                                        Noord-Holland
+                                    </label>
+                                </div>
+                            </fieldset>
+                            </div>
+                            <div class="col-sm-6">
+                              <fieldset>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio7">
+                                    <label for="radio7">
+                                        Zuid-Holland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio8">
+                                    <label for="radio8">
+                                        Utrecht
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio9">
+                                    <label for="radio9">
+                                        Zeeland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio10">
+                                    <label for="radio10">
+                                        Noord-Brabant
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio11">
+                                    <label for="radio11">
+                                        Limburg
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio12">
+                                    <label for="radio12">
+                                        Gelderland
+                                    </label>
+                                </div>
+                              </fieldset>
+                            </div>
+                        </div>
+
+                        <span class="vacaform">Iets anders dan weer</span>
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <fieldset>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio1">
+                                    <label for="radio1">
+                                        Drenthe
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio2">
+                                    <label for="radio2">
+                                        Groningen
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio3">
+                                    <label for="radio3">
+                                        Friesland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio4">
+                                    <label for="radio4">
+                                        Flevoland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio5">
+                                    <label for="radio5">
+                                        Overijssel
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio6">
+                                    <label for="radio6">
+                                        Noord-Holland
+                                    </label>
+                                </div>
+                            </fieldset>
+                            </div>
+                            <div class="col-sm-6">
+                              <fieldset>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio7">
+                                    <label for="radio7">
+                                        Zuid-Holland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio8">
+                                    <label for="radio8">
+                                        Utrecht
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio9">
+                                    <label for="radio9">
+                                        Zeeland
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio10">
+                                    <label for="radio10">
+                                        Noord-Brabant
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio11">
+                                    <label for="radio11">
+                                        Limburg
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="provincie" id="radio12">
+                                    <label for="radio12">
+                                        Gelderland
+                                    </label>
+                                </div>
+                              </fieldset>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
