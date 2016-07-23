@@ -38,9 +38,17 @@ class CategoriesController < ApplicationController
       end
   end
 
+  def show
+    @categorie = Category.all
+  end
+
+  def featured
+
+  end
+
 
   def vacature_params
-    params.require(:category).permit(:title, :logo)
+    params.require(:category).permit(:title, :logo, :description)
   end
 
 

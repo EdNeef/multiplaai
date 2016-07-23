@@ -3,7 +3,7 @@ class VacaturesController < ApplicationController
   def index
     @categories = Category.all
     @provinces = Province.all
-    @vacatures = Vacature.by_category_id_and_province(params[:category_id], params[:province])
+    @vacatures = Vacature.by_category_id_and_province_id(params[:category_id], params[:province_id])
   end
 
   def new

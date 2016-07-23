@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
   get 'admin', to: 'admin#index'
 
+  get 'admin/categories/featured', to: 'categories#featured'
+  get 'admin/new/category', to: 'categories#new'
+  get 'admin/new/vacature', to: 'vacatures#new'
+  
+
+
   get 'admin/login', to: 'sessions#new'
   post 'admin/login', to: 'sessions#create'
   get 'admin/logout', to: 'sessions#destroy'
@@ -9,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'admin/vacatures'
   get 'admin/categories'
-  
+
 
   root 'home#index'
 

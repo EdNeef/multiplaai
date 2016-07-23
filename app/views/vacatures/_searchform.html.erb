@@ -4,7 +4,7 @@
     <h2 class="left">Onze vacatures</h2>
     <div class="customhrleft"></div>
     <%= form_tag '', :method => :get do %>
-    <span class="vacaform">Niveau</span>
+    <span class="vacaform">Categorieen</span>
     <fieldset>
         <% @categories.each do |cat| %>
         <div class="radio">
@@ -13,14 +13,14 @@
         </div>
         <% end %>
     </fieldset>
-    <span class="vacaform">Provincie</span>
+    <span class="vacaform">Categorieen</span>
     <div class="row">
         <% @provinces.each_slice(6) do |cats| %>
         <div class="col-sm-6">
             <fieldset>
                 <% cats.each do |cat| %>
                 <div class="radio">
-                    <%= radio_button_tag 'province', cat.id %>
+                    <%= radio_button_tag 'province_id', cat.id %>
                     <label><%= cat.title %></label>
                 </div>
                 <% end %>
@@ -28,6 +28,7 @@
         </div>
         <% end %>
     </div>
+
     <%= submit_tag 'Filter' %>
     <% end %>
 </div>

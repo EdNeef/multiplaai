@@ -4,12 +4,16 @@
     <%= v.input :title, label: "Titel" %>
   </div>
 
-
-
   <div class="form-group">
     <%= v.input :logo, label: "Logo (zie devicon.fr)" %>
   </div>
 
-  <%= v.submit(@categorie.new_record? ? "Voeg categorie toe!" : "Update vacature", class: "btn btn-success") %>
+  <div class="form-group">
+    <%= v.input :description, label: "Beschrijving" %>
+  </div>
+
+
+
+  <%= v.submit(@categorie.new_record? ? "Voeg categorie toe!" : "Update categorie", class: "btn btn-success") %>
   <%= link_to "Terug naar overzicht", admin_categories_path, class: "btn btn-info" %>
   <% end %>

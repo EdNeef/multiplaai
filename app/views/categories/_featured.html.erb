@@ -1,0 +1,17 @@
+<div id="cats">
+  <div class="container">
+    <h2>Uitgelichte categorieen</h2>
+    <div class="customhr"></div>
+    <div class="row">
+      <% @categories.each do |cat| %>
+        <div class="col-sm-4">
+          <div class="cat">
+            <span class="glyphicon devicon-<%= cat.logo %>-plain" aria-hidden="true"></span>
+            <h3><%= cat.title %></h3>
+            <p><%= cat.description %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
