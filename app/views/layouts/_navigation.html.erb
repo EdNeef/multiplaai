@@ -1,22 +1,2 @@
-<nav id="header" class="navbar navbar-fixed-top">
-  <div id="header-container" class="container navbar-container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-      </button>
-      <%= link_to 'ProjectNAME', root_path, class: "navbar-brand logo", id: "brand" %>
-    </div>
-
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="vacatures.html">Vacatures</a></li>
-        <li><a href="over-ons.html">Wie zijn wij</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><%= link_to "cat3, rotterdam", vacatures_path(:category_id=>3, :location=>"rotterdam") %></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<%= render 'layouts/navigationhome' %>
 <div class="navbg"></div>
