@@ -1,9 +1,9 @@
 class Vacature < ActiveRecord::Base
 
-  def self.by_category_id_and_location(category_id = nil, location = nil)
-    return where(category_id: category_id, location: location) if category_id && location
+  def self.by_category_id_and_province(category_id = nil, province_id = nil)
+    return where(category_id: category_id, province_id: province_id) if category_id && province_id
     return where(category_id: category_id) if category_id
-    return where(location: location) if location
+    return where(province_id: province_id) if province_id
     all
   end
 
@@ -13,4 +13,5 @@ class Vacature < ActiveRecord::Base
 
 
   belongs_to :category
+  belongs_to :provinces
 end

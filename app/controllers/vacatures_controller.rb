@@ -2,16 +2,18 @@ class VacaturesController < ApplicationController
 
   def index
     @categories = Category.all
-    @vacatures = Vacature.by_category_id_and_location(params[:category_id], params[:location])
+    @provinces = Province.all
+    @vacatures = Vacature.by_category_id_and_province(params[:category_id], params[:province])
   end
 
   def new
     @vacature = Vacature.new
     @category = Category.all
-
+    @province = Province.all
   end
 
   def create
+    @province = Province.all
     @category = Category.all
     @vacature = Vacature.new(vacature_params)
     if @vacature.save
@@ -24,6 +26,7 @@ class VacaturesController < ApplicationController
   end
 
   def edit
+    @province = Province.all
     @category = Category.all
     @vacature = Vacature.find(params[:id])
   end
@@ -55,7 +58,7 @@ class VacaturesController < ApplicationController
   private
 
     def vacature_params
-      params.require(:vacature).permit(:title, :description, :function, :location, :category, :category_id)
+      params.require(:vacature).permit(:title, :description, :function, :location, :category, :category_id, :province_id)
     end
 
 end
