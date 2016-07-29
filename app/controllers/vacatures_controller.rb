@@ -3,7 +3,7 @@ class VacaturesController < ApplicationController
   def index
     @categories = Category.all
     @provinces = Province.all
-    @vacatures = Vacature.by_category_id_and_province_id(params[:category_id], params[:province_id])
+    @vacatures = Vacature.by_category_id_and_province_id(params[:category_id], params[:province_id]).paginate(:page => params[:page], per_page: 5)
   end
 
   def new
